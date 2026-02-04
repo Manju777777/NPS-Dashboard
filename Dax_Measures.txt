@@ -1,0 +1,10 @@
+Here are the measures i have used in my dashboard
+
+Acheived_Promoter = SUM(Sheet1[Pr10])+SUM(Sheet1[Pr9])
+Acheived_Promoter_Percentage = DIVIDE([Acheived_Promoter],[Target_Promoter01])
+Detractor_percentage = DIVIDE(SUM(Sheet1[D1])+SUM(Sheet1[D2])+SUM(Sheet1[D3])+SUM(Sheet1[D4])+SUM(Sheet1[D5])+SUM(Sheet1[D6]),SUM(Sheet1[Grand_Total]))
+NPS_Percentage = Sheet1[Promoter_percentage]-Sheet1[Detractor_percentage]
+Promoter_percentage = DIVIDE(SUM(Sheet1[Pr9])+SUM(Sheet1[Pr10]),SUM(Sheet1[Grand_Total]))
+Target_Promoter01 = SUM(Sheet1[Target_Promoter])
+Total_1_HR_cases = SUM(Sheet1[>1 HR cases])+SUM(Sheet1[Within_1_hour])
+Within_1_HR_percentage = DIVIDE(SUM(Sheet1[Within_1_hour]),Sheet1[Total_1_HR_cases])
